@@ -38,6 +38,9 @@ Joe Fass - joseph.fass@providence.org
 - Sequence and coordinates on the molecules themselves
   - DNA (chromosomes, cDNA)
   - mRNA
+- Annotation on the coordinate system
+  - [BioMart](http://uswest.ensembl.org/biomart/martview/edea6a6cf7468c97141ac7db2f8fa1cf)
+  - [UCSC Genome Browser](https://genome.ucsc.edu/)
 
 #### Completeness
 
@@ -49,9 +52,8 @@ Joe Fass - joseph.fass@providence.org
 
 #### Circularity?
 
-[iGenomes via AWS S3, Ireland region](https://github.com/ewels/AWS-iGenomes) 
-[iGenomes via Illumina](https://support.illumina.com/sequencing/sequencing_software/igenome.html)
-
+[iGenomes via AWS S3, Ireland region](https://github.com/ewels/AWS-iGenomes)  
+[iGenomes via Illumina](https://support.illumina.com/sequencing/sequencing_software/igenome.html)  
 [Genomes via UCSC](https://genome.ucsc.edu/goldenPath/help/ftp.html)
 
 [GENCODE](https://www.gencodegenes.org/)
