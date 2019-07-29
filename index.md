@@ -11,7 +11,7 @@ Joe Fass - joseph.fass@providence.org
 
 ---
 
-![joe](joe.png | width=100)
+<img src="./joe.png" width="100">
 
 [BioMart](http://uswest.ensembl.org/biomart/martview/edea6a6cf7468c97141ac7db2f8fa1cf)
 
