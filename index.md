@@ -11,7 +11,7 @@ Joe Fass - joseph.fass@providence.org
 
 ---
 
-![joe](./20190704_120734.jpg)
+![joe](joe.png)
 
 [BioMart](http://uswest.ensembl.org/biomart/martview/edea6a6cf7468c97141ac7db2f8fa1cf)
 
