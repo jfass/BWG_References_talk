@@ -112,7 +112,8 @@ tar -xzvf PhiX_Illumina_RTA.tar.gz
 Now, we have a sequenced sample of a related virus, "fauX" ... let's grab those reads:
 
 ```
-wget 
+wget https://raw.github.com/jfass/BWG_References_talk/master/fauX_R1.fq.gz
+wget https://raw.github.com/jfass/BWG_References_talk/master/fauX_R2.fq.gz
 ```
 
 
