@@ -102,8 +102,19 @@ BWA (popular read aligner) will mark reads aligning across the "break" (end / be
 
 #### An Excercise: what can we do with a good reference?
 
-Google "iGenomes" and/or go to the Illumina [site](https://support.illumina.com/sequencing/sequencing_software/igenome.html), then download the Illumina phiX "RTA" reference:
+Google "iGenomes" and/or go to the Illumina [site](https://support.illumina.com/sequencing/sequencing_software/igenome.html), then download and un-archive the Illumina phiX "RTA" reference:
 
-``` wget http://igenomes.illumina.com.s3-website-us-east-1.amazonaws.com/PhiX/Illumina/RTA/PhiX_Illumina_RTA.tar.gz
+```
+wget http://igenomes.illumina.com.s3-website-us-east-1.amazonaws.com/PhiX/Illumina/RTA/PhiX_Illumina_RTA.tar.gz
+tar -xzvf PhiX_Illumina_RTA.tar.gz
+```
 
-More text.
+Now, we have a sequenced sample of a related virus, "fauX" ... let's grab those reads:
+
+```
+wget 
+```
+
+
+
+
