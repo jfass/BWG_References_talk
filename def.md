@@ -1,10 +1,55 @@
 
 ### Reference means what?
 
+#### What do we want to know about an organism's genome?
+
 - Sequence and coordinates on the molecules themselves
-  - DNA (chromosomes, cDNA)
+  - DNA (chromosomes, plasmids, cDNA?)
   - mRNA
+  - protein
 - Annotation on the coordinate system
+  - genes
+  - repeats
+  - pseudogenes
+  - regulatory stuff
+  - epigenetic marks, chromatin interactions ...
+
+#### File formats
+
+- Sequence
+  - (nucleotides) ... fasta (*.fasta, *.fa, *.fna)
+
+```
+>sequenceName_and|lots of other-junk/with/no\standards #pretty	much
+ACGTUacgtuNn-_.*   # line wraps at 80 or any number of characters (\n for Unix/Linux, \r\n or ^M Windows, \r classic MacOS)
+MRWSYKVHDBN        # IUPAC Ambiguity Codes
+```
+
+  - (amino acids) ... fasta (*.fasta, *.fa, *.faa)
+
+```
+>sequenceName
+ACDE...WY
+```
+
+- Annotation
+  - [UCSC Genome Browser File Format FAQ](https://genome.ucsc.edu/FAQ/FAQformat.html)
+  - BED (sequence, start, stop ...)
+
+```
+chr1	100	200	# tab "\t" separated columns ... minimum 3, but more (defined) columns can be used
+```
+
+  - GTF (Gene Transfer Format) ... (8 tab-separated columns same as GFF, with defined *attributes* in column 9)
+
+```
+# seqname	source	feature	start	end	score	strand(+-.)	frame(012.)	gene_id ""; transcript_id ""
+chr3	MAKER	promoter	100	200	500	+	.	gene_id "fake"; transcript_id "fake_7"
+```
+
+  
+
+
   - [BioMart](http://uswest.ensembl.org/biomart/martview/edea6a6cf7468c97141ac7db2f8fa1cf)
   - [UCSC Genome Browser](https://genome.ucsc.edu/)
 
