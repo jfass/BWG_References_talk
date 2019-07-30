@@ -72,6 +72,8 @@ readID	25	phiX	217	60	75M	=	235	96	ATATAGCCGATATACC[...]	IIAIAIII45,(IIIAAA[...]
 
   - sequence variants ... VCF/BCF/gVCF
 
+For more on file formats, see, e.g. 2018 Variant Analysis Workshop [here](https://bioinformatics.ucdavis.edu/training/documentation/).
+
 
   - [BioMart](http://uswest.ensembl.org/biomart/martview/edea6a6cf7468c97141ac7db2f8fa1cf)
   - [UCSC Genome Browser](https://genome.ucsc.edu/)
@@ -98,4 +100,10 @@ BWA (popular read aligner) will mark reads aligning across the "break" (end / be
 - [iGenomes via Illumina](https://support.illumina.com/sequencing/sequencing_software/igenome.html)  
 - [Genomes via UCSC](https://genome.ucsc.edu/goldenPath/help/ftp.html)
 
+#### An Excercise: what can we do with a good reference?
 
+Google "iGenomes" and/or go to the Illumina [site](https://support.illumina.com/sequencing/sequencing_software/igenome.html), then download the Illumina phiX "RTA" reference:
+
+``` wget http://igenomes.illumina.com.s3-website-us-east-1.amazonaws.com/PhiX/Illumina/RTA/PhiX_Illumina_RTA.tar.gz
+
+More text.
