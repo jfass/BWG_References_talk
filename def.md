@@ -11,8 +11,11 @@
   - genes
   - repeats
   - pseudogenes
+  - conserved regions (e.g. alignment to other species)
+  - variant regions (normal / diseased sequence variation)
   - regulatory stuff
-  - epigenetic marks, chromatin interactions ...
+  - epigenetic marks, chromatin interactions, etc.
+  - aligned reads from targeted / shotgun sequencing
 
 #### File formats
 
@@ -47,7 +50,27 @@ chr1	100	200	# tab "\t" separated columns ... minimum 3, but more (defined) colu
 chr3	MAKER	promoter	100	200	500	+	.	gene_id "fake"; transcript_id "fake_7"
 ```
 
-  
+  - aligned reads ... BLAST, BLAT, SAM/BAM/CRAM (.bam & .bam.bai | .bai, .cram & .cram.crai | .crai)
+    - SAM is text
+    - BAM or CRAM are two different binary encodings of SAM (BAM more standard, CRAM more recent and less common)
+    - [SAMTools](http://www.htslib.org/)
+
+Each alignment described on a single line:
+```
+QNAME   FLAG    RNAME   POS     MAPQ    CIGAR   RNEXT   PNEXT   TLEN    SEQ     QUAL    extraTags
+```
+
+... but with information in the header (lines starting with '@')
+```
+@HD	VN:1.6	SO:coordinate
+@SQ	SN:phiX	LN:5200
+readID	25	phiX	217	60	75M	=	235	96	ATATAGCCGATATACC[...]	IIAIAIII45,(IIIAAA[...]	MD:Z:72A2
+```
+
+    - SAM flag:
+![SAM slide](./SAMflag.png)
+
+  - sequence variants ... VCF/BCF/gVCF
 
 
   - [BioMart](http://uswest.ensembl.org/biomart/martview/edea6a6cf7468c97141ac7db2f8fa1cf)
