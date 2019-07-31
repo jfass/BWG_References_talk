@@ -20,20 +20,23 @@
 #### File formats
 
 - Sequence
-    - (nucleotides) ... fasta (*.fasta, *.fa, *.fna)
+    - nucleotides ... fasta (*.fasta, *.fa, *.fna)
+        - typically newlines every ~80 nt, but not required
+        - (\n for Unix/Linux, \r\n or ^M Windows, \r classic MacOS)
+        - can contain IUPAC Ambiguity Codes
 
-    ```
-    >sequenceName_and|lots of other-junk/with/no\standards #pretty	much
-    ACGTUacgtuNn-_.*   # line wraps at 80 or any number of characters (\n for Unix/Linux, \r\n or ^M Windows, \r classic MacOS)
-    MRWSYKVHDBN        # IUPAC Ambiguity Codes
-    ```
+        ```
+        >sequenceName_and|lots of other-junk/with/no\standards #pretty_much_chaos
+        ACGTUacgtuNn-_.*\[\]
+        MRWSYKVHDBN
+        ```
 
     - (amino acids) ... fasta (*.fasta, *.fa, *.faa)
 
-    ```
-    >sequenceName
-    ACDE...WY
-    ```
+        ```
+        >sequenceName
+        ACDE...WY
+        ```
 
 - Annotation
     - [UCSC Genome Browser File Format FAQ](https://genome.ucsc.edu/FAQ/FAQformat.html)
