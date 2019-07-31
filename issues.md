@@ -1,15 +1,24 @@
 
 ### Broader Reference Issues
 
-#### Completeness
+#### Is your genome complete?
 
-- completeness
-    - missing regions, known ('NNNNNNN') or unknown
-    - correctness (revisions)
-    - single individual (ploidy?) vs population
-    - natural variation? hypervariable regions?
-- unknown regions
-- unplaced regions
+- DNA
+    - completeness
+        - missing regions, known ('NNNNNNN') or unknown
+        - fragmentation (repeats)
+    - correctness
+        - single individual (ploidy?) vs population
+        - natural variation? hypervariable regions?
+    - stability? (limits of current technology)
+- not DNA ... but, we can learn about it by _sequencing_ and _aligning_
+    - DNA-binding proteins (regulation...)
+    - DNA modification
+    - chromatin structure
+    -?
+
+
+Other coordinate systems (put below exercise) ... gene sets, protein sets (depend on annotation on genome)
 
 ---
 

@@ -76,7 +76,7 @@
 
 ---
 
-#### An Excercise: what can we do with a good reference?
+#### An Exercise: what can we do with a good reference?
 
 1\. Google "iGenomes" and/or go to the Illumina [site](https://support.illumina.com/sequencing/sequencing_software/igenome.html), then download and un-archive the Illumina phiX "RTA" reference:
 
