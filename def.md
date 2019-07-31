@@ -22,11 +22,11 @@
 - Sequence
     - (nucleotides) ... fasta (*.fasta, *.fa, *.fna)
 
-```
->sequenceName_and|lots of other-junk/with/no\standards #pretty	much
-ACGTUacgtuNn-_.*   # line wraps at 80 or any number of characters (\n for Unix/Linux, \r\n or ^M Windows, \r classic MacOS)
-MRWSYKVHDBN        # IUPAC Ambiguity Codes
-```
+    ```
+    >sequenceName_and|lots of other-junk/with/no\standards #pretty	much
+    ACGTUacgtuNn-_.*   # line wraps at 80 or any number of characters (\n for Unix/Linux, \r\n or ^M Windows, \r classic MacOS)
+    MRWSYKVHDBN        # IUPAC Ambiguity Codes
+    ```
 
     - (amino acids) ... fasta (*.fasta, *.fa, *.faa)
 
