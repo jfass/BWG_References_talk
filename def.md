@@ -148,7 +148,7 @@ phix_3793_4274_2:0:0_1:0:0_3	163	phix	3794	60	70M	=	4206	482	TGATGCTGCTTGTGGTGTG
 [fputs] Broken pipe
 ```
 
-4. Rerun the alignment, using SAMtools' "view" command to turn the text SAM format into binary BAM, sort it in order of the alignments locations in the genome, and index the resulting BAM file:
+4\. Rerun the alignment, using SAMtools' "view" command to turn the text SAM format into binary BAM, sort it in order of the alignments locations in the genome, and index the resulting BAM file:
 
 ```
 bwa mem PhiX/Illumina/RTA/Sequence/BWAIndex/genome.fa fauX_R1.fq.gz fauX_R2.fq.gz \
@@ -157,7 +157,7 @@ bwa mem PhiX/Illumina/RTA/Sequence/BWAIndex/genome.fa fauX_R1.fq.gz fauX_R2.fq.g
 samtools index fauX.bam
 ```
 
-5. Finally, start Broad's [Integrated Genomics Viewer](https://software.broadinstitute.org/software/igv/download), load the genome from the iGenomes directory (under "Genomes" --> "Load Genome from File..." select PhiX/Illumina/RTA/Sequence/BWAIndex/genome.fa), and load the aligned reads (under "File" --> "Load from File..." select your fauX.bam file).
+5\. Finally, start Broad's [Integrated Genomics Viewer](https://software.broadinstitute.org/software/igv/download), load the genome from the iGenomes directory (under "Genomes" --> "Load Genome from File..." select PhiX/Illumina/RTA/Sequence/BWAIndex/genome.fa), and load the aligned reads (under "File" --> "Load from File..." select your fauX.bam file).
 
 ![IGV](igv.png)
 
