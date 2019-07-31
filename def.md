@@ -50,7 +50,7 @@ chr1	100	200	# tab "\t" separated columns ... minimum 3, but more (defined) colu
 chr3	MAKER	promoter	100	200	500	+	.	gene_id "fake"; transcript_id "fake_7"
 ```
 
-  - aligned reads ... BLAST, BLAT, SAM/BAM/CRAM (.bam & .bam.bai | .bai, .cram & .cram.crai | .crai)
+  - aligned reads ... BLAST, BLAT, SAM/BAM/CRAM (.bam & .bam.bai \| .bai, .cram & .cram.crai \| .crai)
     - SAM is text
     - BAM or CRAM are two different binary encodings of SAM (BAM more standard, CRAM more recent and less common)
     - [SAMTools](http://www.htslib.org/)
@@ -100,23 +100,25 @@ BWA (popular read aligner) will mark reads aligning across the "break" (end / be
 - [iGenomes via Illumina](https://support.illumina.com/sequencing/sequencing_software/igenome.html)  
 - [Genomes via UCSC](https://genome.ucsc.edu/goldenPath/help/ftp.html)
 
+---
+
 #### An Excercise: what can we do with a good reference?
 
-1. Google "iGenomes" and/or go to the Illumina [site](https://support.illumina.com/sequencing/sequencing_software/igenome.html), then download and un-archive the Illumina phiX "RTA" reference:
+1\. Google "iGenomes" and/or go to the Illumina [site](https://support.illumina.com/sequencing/sequencing_software/igenome.html), then download and un-archive the Illumina phiX "RTA" reference:
 
 ```
 wget http://igenomes.illumina.com.s3-website-us-east-1.amazonaws.com/PhiX/Illumina/RTA/PhiX_Illumina_RTA.tar.gz
 tar -xzvf PhiX_Illumina_RTA.tar.gz
 ```
 
-2. Now, we have a sequenced sample of a related virus, "fauX" ... let's grab those reads:
+2\. Now, we have a sequenced sample of a related virus, "fauX" ... let's grab those reads:
 
 ```
 wget https://raw.github.com/jfass/BWG_References_talk/master/fauX_R1.fq.gz
 wget https://raw.github.com/jfass/BWG_References_talk/master/fauX_R2.fq.gz
 ```
 
-3. Align the reads to the phiX genome (already indexed for BWA) from iGenomes, and look at the first part of the SAM file that results:
+3\. Align the reads to the phiX genome (already indexed for BWA) from iGenomes, and look at the first part of the SAM file that results:
 
 ```
 bwa mem PhiX/Illumina/RTA/Sequence/BWAIndex/genome.fa fauX_R1.fq.gz fauX_R2.fq.gz | head
