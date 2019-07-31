@@ -102,20 +102,64 @@ BWA (popular read aligner) will mark reads aligning across the "break" (end / be
 
 #### An Excercise: what can we do with a good reference?
 
-Google "iGenomes" and/or go to the Illumina [site](https://support.illumina.com/sequencing/sequencing_software/igenome.html), then download and un-archive the Illumina phiX "RTA" reference:
+1. Google "iGenomes" and/or go to the Illumina [site](https://support.illumina.com/sequencing/sequencing_software/igenome.html), then download and un-archive the Illumina phiX "RTA" reference:
 
 ```
 wget http://igenomes.illumina.com.s3-website-us-east-1.amazonaws.com/PhiX/Illumina/RTA/PhiX_Illumina_RTA.tar.gz
 tar -xzvf PhiX_Illumina_RTA.tar.gz
 ```
 
-Now, we have a sequenced sample of a related virus, "fauX" ... let's grab those reads:
+2. Now, we have a sequenced sample of a related virus, "fauX" ... let's grab those reads:
 
 ```
 wget https://raw.github.com/jfass/BWG_References_talk/master/fauX_R1.fq.gz
 wget https://raw.github.com/jfass/BWG_References_talk/master/fauX_R2.fq.gz
 ```
 
+3. Align the reads to the phiX genome (already indexed for BWA) from iGenomes, and look at the first part of the SAM file that results:
+
+```
+bwa mem PhiX/Illumina/RTA/Sequence/BWAIndex/genome.fa fauX_R1.fq.gz fauX_R2.fq.gz | head
+```
+
+```
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 20000 sequences (1400000 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (0, 9939, 0, 0)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (466, 499, 532)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (334, 664)
+[M::mem_pestat] mean and std.dev: (499.03, 49.14)
+[M::mem_pestat] low and high boundaries for proper pairs: (268, 730)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 20000 reads in 0.394 CPU sec, 0.395 real sec
+@SQ	SN:phix	LN:5386
+@PG	ID:bwa	PN:bwa	VN:0.7.17-r1188	CL:bwa mem PhiX/Illumina/RTA/Sequence/BWAIndex/genome.fa fauX_R1.fq.gz fauX_R2.fq.gz
+phix_3789_4316_0:0:0_2:0:0_0	99	phix	3790	60	70M	=	4248	528	TCACTGATGCTGCTTCTGGTGTGGTTGATATTTTTCATGGTATTGATAAAGCTGTTGCCGATACTTGGAA	2222222222222222222222222222222222222222222222222222222222222222222222	NM:i:0	MD:Z:70	MC:Z:70M	AS:i:70	XS:i:0
+phix_3789_4316_0:0:0_2:0:0_0	147	phix	4248	60	70M	=	3790	-528	GTTACTGAGAAGTTAATGGATGAATTGGCAAAATGCTACAATGTGCTCCCCCAACTTGATTTTAATAACA	2222222222222222222222222222222222222222222222222222222222222222222222	NM:i:2	MD:Z:30C29A9	MC:Z:70MAS:i:60	XS:i:0
+phix_3501_3891_1:0:0_4:0:0_1	83	phix	3823	60	70M	=	3502	-391	TTCATGGTATTGATTAAGCTGTTGCCGATACGTGGAACAATTTCTGGAAAGACGGTATAGCTGATGGTAG	2222222222222222222222222222222222222222222222222222222222222222222222	NM:i:4	MD:Z:14A16T25A11T0	MC:Z:70M	AS:i:54	XS:i:0
+phix_3501_3891_1:0:0_4:0:0_1	163	phix	3502	60	70M	=	3823	391	AGGTATATGCACAAAATGAGATGCTTGGTTATCAACAGAAGGAGTCTACTGCTCGCGTTGCGTCTATTAT	2222222222222222222222222222222222222222222222222222222222222222222222	NM:i:1	MD:Z:27C42	MC:Z:70MAS:i:65	XS:i:0
+phix_3290_3816_2:0:0_5:0:0_2	99	phix	3291	60	70M	=	3748	527	CTTGCTGCTGCATTTCCTGAGCTAAATGCTTGGGAGCGTGCTGGTTCTGATGCTTCCTCTGCTGGTATGG	2222222222222222222222222222222222222222222222222222222222222222222222	NM:i:2	MD:Z:23T21G24	MC:Z:70MAS:i:60	XS:i:0
+phix_3290_3816_2:0:0_5:0:0_2	147	phix	3748	60	70M	=	3291	-527	CTTCTAATATTGGCGCTACTGCAAAGGATATTTCTAATGTAGTCACTGAGGCTCCGTCTGGTGTGGTTGA	2222222222222222222222222222222222222222222222222222222222222222222222	NM:i:5	MD:Z:5C34C8T3G1T14	MC:Z:70M	AS:i:45	XS:i:0
+phix_3793_4274_2:0:0_1:0:0_3	83	phix	4206	60	70M	=	3794	-482	GGCCATAAGGCTGCTTCTGACGTTCGTGAGGAGTTTGTATCTGTTACTGAGAAGTTAATGGATGAATTGG	2222222222222222222222222222222222222222222222222222222222222222222222	NM:i:1	MD:Z:29T40	MC:Z:70MAS:i:65	XS:i:0
+phix_3793_4274_2:0:0_1:0:0_3	163	phix	3794	60	70M	=	4206	482	TGATGCTGCTTGTGGTGTGGTTGATATTTTTCATGGTATTGATAAAGCTGTTTCCGATACTTGGAACAAT	2222222222222222222222222222222222222222222222222222222222222222222222	NM:i:2	MD:Z:11C40G17	MC:Z:70MAS:i:60	XS:i:0
+[fputs] Broken pipe
+```
+
+4. Rerun the alignment, using SAMtools' "view" command to turn the text SAM format into binary BAM, sort it in order of the alignments locations in the genome, and index the resulting BAM file:
+
+```
+bwa mem PhiX/Illumina/RTA/Sequence/BWAIndex/genome.fa fauX_R1.fq.gz fauX_R2.fq.gz \
+  | samtools view -bhS - \
+  | samtools sort -o fauX.bam -
+samtools index fauX.bam
+```
+
+5. Finally, start Broad's [Integrated Genomics Viewer](https://software.broadinstitute.org/software/igv/download), load the genome from the iGenomes directory (under "Genomes" --> "Load Genome from File..." select PhiX/Illumina/RTA/Sequence/BWAIndex/genome.fa), and load the aligned reads (under "File" --> "Load from File..." select your fauX.bam file).
+
+![IGV](igv.png)
 
 
 
