@@ -91,7 +91,32 @@ curl -s ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_31/GRCh3
   | perl -ane '$id=shift @F; $id.=" "; $id.=shift @F; $l=length(join("",@F)); $c+=$l; print "$id\t$l\t$c\n"'
 ```
 
-which results in 593 lines (sequences):
+... which results in 593 lines (sequences). The original, primary chromosomes, the unplaced scaffolds, _patches_, and _alternate_ sequences that represent divergent haplotypes. For example:
 
 ```
+KN538363.1 HG2232_PATCH 365499  3102561769
+KN538362.1 HG2233_PATCH 208149  3102769918
+KQ031385.1 HG2235_PATCH 373699  3103143617
+```
+
+or ...
+
+```
+KI270920.1 HSCHR19KIR_FH05_A_HAP_CTG3_1 198005  3158097017
+KI270921.1 HSCHR19KIR_FH05_B_HAP_CTG3_1 282224  3158379241
+KI270922.1 HSCHR19KIR_FH06_A_HAP_CTG3_1 187935  3158567176
+```
+
+These sequences represent alternatives for sequence _already in the primary chromosomes_; as such they could draw aligned reads away from the primary chromosomes if they're a comparable or better match to the sample.
+
+Here's an ideogram showing all the affected locations in GRCh38:
+
+![ideogram](GATK_GRCh38_ideogram.png)
+
+... and more [discussion](https://gatkforums.broadinstitute.org/gatk/discussion/7857/reference-genome-components) in the Broad Institute's GATK Forum.
+
+
+
+
+
 
