@@ -1,7 +1,7 @@
 
-### Reference means what?
+## Reference means what?
 
-#### What do we want to know about an organism's genome?
+### What do we want to know about an organism's genome?
 
 - Sequence and coordinates on the molecules themselves
     - DNA (chromosomes, plasmids, cDNA?)
@@ -17,7 +17,7 @@
     - epigenetic marks, chromatin interactions, etc.
     - aligned reads from targeted / shotgun sequencing
 
-#### Why do we care about genomes so much?
+### Why do we care about genomes so much?
 
 Because of High Throughput Sequencing.
 
@@ -27,7 +27,7 @@ We can turn so many questions into questions of sequence (generally, sequence ar
 - Huge change in expression / cell function? Sequence which parts of the genome are accessible (ATAC-Seq).
 - How abundant are certain proteins? Put DNA-labels on antibodies, then sequence the labels.
 
-#### Where do genomes come from?
+### Where do genomes come from?
 
 In 1990, they came from Sanger sequencers (400-800bp reads) and [billions of dollars](https://en.wikipedia.org/wiki/Human_Genome_Project). Today they come from PacBio RS or Oxford Nanopore PromethION sequencers (50kbp and up to several Mbp reads, respectively) and graduate student tears.
 
@@ -35,7 +35,7 @@ Various projects - [GAGE](http://gage.cbcb.umd.edu/), dnGASP (links not availabl
 
 Annotation of genomes comes from aligning sequenced transcripts to a reference genome, _ab initio_ gene prediction, and lots and lots of curation.
 
-#### File formats - what do genome and annotation files look like?
+### File formats - what do genome and annotation files look like?
 
 - Sequence
     - nucleotides ... fasta (*.fasta, *.fa, *.fna)
@@ -102,7 +102,7 @@ Annotation of genomes comes from aligning sequenced transcripts to a reference g
 
 ---
 
-#### An Exercise: what can we do with a good reference?
+### An Exercise: what can we do with a good reference?
 
 1\. Google "iGenomes" and/or go to the Illumina [site](https://support.illumina.com/sequencing/sequencing_software/igenome.html), then download and un-archive the Illumina phiX "RTA" reference:
 

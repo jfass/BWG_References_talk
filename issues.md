@@ -1,7 +1,7 @@
 
-### Broader Reference Issues
+## Broader Reference Issues
 
-#### Is your genome complete?
+### Is your genome complete?
 
 - DNA
     - completeness
@@ -255,22 +255,25 @@ This is all leading up to aligning multiple genome versions together. See the UC
 
 ---
 
-#### Circularity?
+### Circularity?
 
 - Generally, tools are "unaware" of the circular nature of plasmids or circular chromosomes.
 - Fasta format has no widely accepted solution for circular sequences.
 - BWA (popular read aligner) will mark reads aligning across the "break" (end / beginning) as "improper pairs."
 
-#### Versions and Sources
+### Versions and Sources
 
 - [iGenomes via AWS S3, Ireland region](https://github.com/ewels/AWS-iGenomes)
 - [iGenomes via Illumina](https://support.illumina.com/sequencing/sequencing_software/igenome.html)
 - [Genomes via UCSC](https://genome.ucsc.edu/goldenPath/help/ftp.html)
 
-#### Browsers and Viewers
+### Browsers and Viewers
 
 - [UCSC Genome Browser](https://genome.ucsc.edu/) is a server-based genome browser
 - [IGV](https://software.broadinstitute.org/software/igv/) is a desktop / laptop genome browser
 
+### CONSISTENCY.
+
+This is the biggest, most tedious problem that arises when using reference genomes. For example (don't quote me on this exactly), UCSC genomes have chromosome names like {chr1..chr22,chrX,chrY,chrM} ... EMBL's ENSEMBL genomes have {1..22,X,Y,M} ... NCBI's genomes used to have RefGene identifiers {NC_#####,etc.}. Most tools will *not* recognize and use those forms interchangeably, so if your BAM files use "chr1", your GTF file needs to use "chr1". And clearly, the chromosome sequence you aligned to needs to be exactly the same as that used for other tools, like variant callers.
 
 

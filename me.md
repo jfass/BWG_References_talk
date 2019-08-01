@@ -1,5 +1,5 @@
 
-### A bit about me
+## A bit about me
 
 - Chemical Engineering bachelors
   - (with a Biochemistry option)
