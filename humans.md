@@ -9,3 +9,13 @@ See GENCODE's [Release history](https://www.gencodegenes.org/human/releases.html
 
 But let's take a look at the options _within_ the most recent "Reference release (release 31)".
 
+Sequence (genome or transcript):
+
+![fasta files](gencode_fasta.png)
+
+Gene annotation:
+
+![annotation files](gencode_ann.png)
+
+... and Metadata files adding to the information available about genes.
+
