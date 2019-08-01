@@ -253,7 +253,7 @@ I've done this for all _C elegans_ genome versions versus the "current_developme
                                                                                                                         
 ```
 
-This is all leading up to aligning multiple genome versions together. See the UCSC Genome Browser's liftover tool and conservation tracks.
+So, this is just an estimate of the distances between genome versions, obtained by sub-sampling the sequence in it. Obviously, the next logical step would be to align multiple genome versions together. See the UCSC Genome Browser's "Conservation" track (for comparisons between species), and "liftover" tool (for translation between genome versions).
 
 ---
 
@@ -268,6 +268,7 @@ This is all leading up to aligning multiple genome versions together. See the UC
 - [iGenomes via AWS S3, Ireland region](https://github.com/ewels/AWS-iGenomes)
 - [iGenomes via Illumina](https://support.illumina.com/sequencing/sequencing_software/igenome.html)
 - [Genomes via UCSC](https://genome.ucsc.edu/goldenPath/help/ftp.html)
+- (more on this later ...)
 
 ### Browsers and Viewers
 

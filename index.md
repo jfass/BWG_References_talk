@@ -11,5 +11,5 @@ Joe Fass - joseph.fass@providence.org
 3. [Broader reference issues](issues)
 4. [Humans](humans)
 5. [... and everyone else](else)
-
+6. [The future of reference genomes](graphs)
 
