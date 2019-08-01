@@ -139,18 +139,22 @@ Obviously things like GC content can be important (if it's off, could indicate c
 
 A less crude way of (quickly) examining sequence content involves breaking each genome down into k-mers ... i.e.:
 
+```
 ThisSentenceIsGenomeSequence
+```
 
 At k=21, here are all the k-mers of that sequence:
 
-ThisSentenceIsGenomeS  
- hisSentenceIsGenomeSe  
-  isSentenceIsGenomeSeq  
-   sSentenceIsGenomeSequ  
-    SentenceIsGenomeSeque  
-     entenceIsGenomeSequen  
-      ntenceIsGenomeSequenc  
+```
+ThisSentenceIsGenomeS
+ hisSentenceIsGenomeSe
+  isSentenceIsGenomeSeq
+   sSentenceIsGenomeSequ
+    SentenceIsGenomeSeque
+     entenceIsGenomeSequen
+      ntenceIsGenomeSequenc
        tenceIsGenomeSequence
+```
 
 One could count the occurrences of every 21-mer that appears in different versions of a genome, but it's quicker to select a random subset of k-mers (this is the "minHash" part) and evaluate how many of them are shared between them. Let's do this with a tool called Mash:
 
