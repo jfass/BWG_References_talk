@@ -113,7 +113,13 @@ Here's an ideogram showing all the affected locations in GRCh38:
 
 ![ideogram](GATK_GRCh38_ideogram.png)
 
-... and more [discussion](https://gatkforums.broadinstitute.org/gatk/discussion/7857/reference-genome-components) in the Broad Institute's GATK Forum.
+... and you can find more [discussion](https://gatkforums.broadinstitute.org/gatk/discussion/7857/reference-genome-components) in the Broad Institute's GATK Forum. To illustrate the alignment problem, here's an IGV view of reads aligned to one of the regions _for which alternative haplotypes exist in the reference:
+
+![with hap](with_hap.png)
+
+... and the same read set *realigned* _after removing those alternative haplotype contigs from the reference_.:
+
+![without hap](without_hap.png)
 
 
 
