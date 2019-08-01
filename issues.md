@@ -15,14 +15,12 @@
     - DNA-binding proteins (regulation...)
     - DNA modification
     - chromatin structure
-    -?
-
-
-Other coordinate systems (put below exercise) ... gene sets, protein sets (depend on annotation on genome)
+    - ?
+    - *how do we get this kind of information*
 
 ---
 
-An Exercise: how "complete" is the _C elegans_ genome?
+### An Exercise: how "complete" is the _C elegans_ genome?
 
 Let's grab a couple _C elegans_ versions to play with:
 
@@ -145,13 +143,13 @@ ThisSentenceIsGenomeSequence
 
 At k=21, here are all the k-mers of that sequence:
 
-ThisSentenceIsGenomeS
- hisSentenceIsGenomeSe
-  isSentenceIsGenomeSeq
-   sSentenceIsGenomeSequ
-    SentenceIsGenomeSeque
-     entenceIsGenomeSequen
-      ntenceIsGenomeSequenc
+ThisSentenceIsGenomeS  
+ hisSentenceIsGenomeSe  
+  isSentenceIsGenomeSeq  
+   sSentenceIsGenomeSequ  
+    SentenceIsGenomeSeque  
+     entenceIsGenomeSequen  
+      ntenceIsGenomeSequenc  
        tenceIsGenomeSequence
 
 One could count the occurrences of every 21-mer that appears in different versions of a genome, but it's quicker to select a random subset of k-mers (this is the "minHash" part) and evaluate how many of them are shared between them. Let's do this with a tool called Mash:

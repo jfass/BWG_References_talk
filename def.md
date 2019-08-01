@@ -49,7 +49,7 @@ Annotation of genomes comes from aligning sequenced transcripts to a reference g
             MRWSYKVHDBN
             ```
 
-            Ideally:
+            Usually, though:
             ```
             >chr93
             GAGTTTTATCGCTTCCATGACGCAGAAGTTAACACTTTCGGATATTTCTGATGAGTCGAAAAATTATCTTGATAAAGCAG
@@ -163,5 +163,5 @@ samtools index fauX.bam
 
 ![IGV](igv.png)
 
-
+... the [IGV User Guide](https://software.broadinstitute.org/software/igv/UserGuide) can help deciphering what we're looking at here. What can we tell about this sample?
 
